@@ -7,7 +7,8 @@ import numpy as np
 import os
 from io import StringIO
 
-# 设置 OpenAI API Key（建议你在 st.secrets 中管理）
+# 从 secrets.toml 中读取 API Key
+client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 MODEL_NAME = "gpt-3.5-turbo-0125"
 
 st.set_page_config(page_title="多功能网页助手", layout="wide")
